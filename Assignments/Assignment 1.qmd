@@ -1,0 +1,106 @@
+---
+title: "GISC 6354-Assignment 1"
+author: "Victoria Ebeh"
+---
+
+[**Q1:**]{.underline}  **Name and describe three applications you have used that employed a database system to store and access persistent data. (e.g. airlines, online trade, banking, university system)**
+
+1.   [Bank of America (Online Banking System):]{.underline} Banks utilize database systems to store and manage vast amounts of customer data, including account details, transaction histories, and personal information. These systems allow customers to access their accounts, perform transactions, and retrieve historical data securely.
+2.   [Amazon (E-commerce Platform):]{.underline} Online retail platforms use databases to store product information, customer details, order histories, and transaction records. This allows users to browse products, make purchases, track orders, and maintain a personalized shopping experience. Databases enable efficient inventory management and order processing.
+3.  [Hospital Information System:]{.underline} Healthcare organizations employ database systems to manage patient records, medical histories, treatment plans, and billing information. This ensures accurate and secure storage of critical health data, facilitates quick access for healthcare professionals, and supports the integration of various aspects of patient care.
+
+[**Q2:**]{.underline} **Propose three applications in domain projects (e.g. criminology, economics, brain science, etc.). Be sure you include i. Purpose ii. Functions iii. Simple interface design**
+
+1.  [Environmental Monitoring System:]{.underline} The application aims to monitor and analyze environmental data for ecological research and conservation purposes. It provides real-time information on air quality, temperature, pollution levels, and various environmental parameters. Additionally, users can contribute data through crowdsourcing, enhancing the application's capability for a comprehensive understanding of environmental conditions. Its functionality will include the following;
+
+-   It will display real-time environmental data with visual indicators and have mapping capabilities.
+
+-   Allow users to explore historical data trends and patterns.
+
+-   Will provide alerts for critical environmental conditions including locational data.
+
+-   Support data contribution with a simple reporting feature.
+
+[Simple interface design:]{.underline} The interface design is user-friendly, featuring a clean dashboard with intuitive icons for different environmental parameters. It includes an interactive map displaying real-time data for various locations, graphs depicting historical trends and patterns, and a user-friendly reporting button for data contributions.
+
+2.  [Criminal Activity Prediction:]{.underline} The purpose is to analyze historical crime data to predict potential crime hotspots, aiding in proactive law enforcement strategies. The application also assists in the allocation and deployment of law enforcement resources and personnel. Furthermore, it provides valuable insights for policymakers to formulate targeted crime prevention initiatives. Its functionality includes;
+
+-   Display crime hotspots on a map with predictive analytics.
+
+-   Allow users to explore crime trends over time.
+
+-   Provide recommendations for optimized police patrolling routes.
+
+-   Generate reports for policymakers based on predictive analysis.
+
+[Simple interface design:]{.underline} The interface design includes a map with color-coded markers highlighting crime hotspots, a time-series graph displaying crime trends, a route optimization tool for law enforcement patrols, and easy-to-read reports with visualizations.
+
+3.  [Disease Monitoring/Prediction Tool:]{.underline} The purpose of this tool is to monitor and predict the spread of infectious diseases, providing timely information to healthcare professionals, policymakers, and the public. By leveraging data analysis and predictive modeling, the tool aims to enhance preparedness, response, and proactive measures to mitigate the impact of diseases. It will be able to carry out the following;
+
+-   Monitor real-time data on reported cases, infection rates, and geographical spread.
+
+-   Utilize predictive algorithms to forecast potential disease outbreaks and hotspot locations.
+
+-   Implement an alert system for notifying users about emerging trends and relevant health advisories.
+
+-   Provide a map interface with color-coded markers for visual representation of disease prevalence.
+
+-   Assist healthcare providers in resource allocation by predicting areas likely to experience a surge in cases.
+
+-   Enable users to input and monitor their health status, symptoms, and travel history.
+
+-   Include a section with educational resources, guidelines, and best practices for disease prevention and management.
+
+[Simple interface design:]{.underline} The interface design for the disease monitoring tool features a clean dashboard displaying key statistics (total cases, recovered cases, active cases), a map with color-coded markers for disease prevalence or hotspots, an alert section for timely notifications on disease trends, a user-friendly health monitoring section, and a dedicated space for educational resources on disease prevention.
+
+**Q3: Describe at least three tables that might be used to store information in a social network/social media system such as Twitter or Reddit.**
+
+1.  [User table:]{.underline} This table stores essential information about users. It enables authentication and authorization and also supports user profile customization and display. Possible data in this table may include;
+
+[Fields/Columns:]{.underline}
+
+-   UserID (Primary Key): Unique identifier for each user.
+
+-   Username: The chosen username or handle of the user.
+
+-   Email: Email address associated with the user's account.
+
+-   Password: Encrypted password for account security.
+
+-   JoinDate: Date when the user joined the platform.
+
+-   ProfileImage: URL or file reference for the user's profile picture.
+
+2.  [Followers/Following Table:]{.underline} This table manages the relationships between users who follow each other and supports features such as the user's follower/following lists. Possible data in this table may include;
+
+[Fields/Columns:]{.underline}
+
+-   FollowerID (Foreign Key): Links to the User Table, indicating the follower.
+
+-   FollowingID (Foreign Key): Links to the User Table, indicating the user being followed.
+
+-   FollowDate: Date when the following relationship was established.
+
+3.  [Post Table:]{.underline}  This table stores individual posts created by the users. It facilitates the display of content on the platform and helps track engagement metrics such as likes and comments. Possible data in this table may include;
+
+[Fields/Columns:]{.underline}
+
+-   PostID (Primary Key): Unique identifier for each post.
+
+-   UserID (Foreign Key): Links to the User Table, indicating the author of the post.
+
+-   Content: The text or multimedia content of the post.
+
+-   Timestamp: Date and time when the post was created.
+
+-   LikesCount: Number of likes or upvotes received.
+
+-   CommentsCount: Number of comments on the post.
+
+**Q4: what are the things current database systems cannot do?**
+
+1.  Perform complex calculations or logic that are not supported by the database language or functions.
+2.  Understand the meaning or context of the data, such as natural language or images.
+3.  Automatically adapt to changing data or user requirements without modification or re-design.
+4.  Guarantee the quality, accuracy, or validity of the data, as these depend on the data sources and the users.
+5.  Prevent unauthorized access, modification, or deletion of the data, unless proper security measures are implemented.
