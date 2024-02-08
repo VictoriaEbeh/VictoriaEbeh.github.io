@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Victoria Ebeh - About me</title>
+<title>Victoria Ebeh</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About Victoria</span></a>
   </li>  
   <li class="nav-item">
@@ -116,44 +116,90 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#my-hobbieslikes" id="toc-my-hobbieslikes" class="nav-link active" data-scroll-target="#my-hobbieslikes">My Hobbies/likes</a></li>
+  <li><a href="#downloads-available-here" id="toc-downloads-available-here" class="nav-link active" data-scroll-target="#downloads-available-here">Downloads available here</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About me</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<p>---</p>
+<p>title: “GISC 6354-Assignment 2”</p>
+<p>author: “Victoria Ebeh”</p>
+<p>output: pdf_document</p>
+<p>---</p>
+<p><u><strong>Q1:</strong></u>&nbsp; <strong>What are the differences between relation schema, relation and instance? Give an example using the university database to illustrate.)</strong></p>
+<ol type="1">
+<li><u>Relation Schema:</u> A relation schema defines the structure of a table in a relational database. It specifies the names and types of attributes (columns) that will be present in the table. A relation schema consists of attributes and domains. For example, The “Department” relation schema may include attributes like department name, building, and budget. It can be written as <strong><em>department (dept name, building, budget).</em></strong></li>
+<li><u>Relation:</u> A relation, often referred to as a table, is the actual implementation of a relation schema. It is a set of rows, where each row represents a record or tuple, and each column represents an attribute. A relation corresponds to a programming-language variable. For example, the “Department” relation includes actual data, such as (Biology, Watson, 90000), (Comp.Sci, Taylor, 100000), where each tuple represents a department.</li>
+<li><u>Instance:</u> An instance of a relation refers to the specific set of data contained in the relation at a given point in time. It represents the actual rows and values present in the table. A relation instance is comparable to the value of a variable. Its contents may change over time due to updates. The current data in the “Teaches” relation, including all existing course records, forms an instance of that relation. Consider <em>figure 1</em> showing a sample of an instance of the “Teaches” relation which shows 15 tuples corresponding to 15 instructors and their class sections.</li>
+</ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/my photo-01.png" class="img-fluid figure-img" width="242"></p>
-<figcaption>My photo</figcaption>
+<p><img src="images/Teaches relation.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figcaption>Figure 1: An instance of the “Teaches” relation</figcaption>
 </figure>
 </div>
-<p>Hi! My name is Victoria Ebeh, and I am a master’s student in the Geospatial Information Sciences program. I hold a bachelor’s degree in Surveying &amp; Geo-informatics (Second Class Upper) from one of the best private universities in Nigeria, Bells University of Technology, Ota, with a CGPA of 4.47 on a 5.0 scale. I am currently working as a DOC Technician at Oncor Electric Delivery, the largest transmission and distribution electric utility in the state of Texas. Before that, I worked as a GIS Analyst at the Lagos office of Arup, a global engineering consulting firm.</p>
-<p>I grew up in Grand Prairie, TX but have spent half my life in Nigeria. My parents wanted my brother and me, as the oldest of their kids, to learn about where we came from and our traditions. I have lived a very unique and special life, learning a vast number of lessons along the way. In my life, I have lived in various regions of two vastly different countries, exposing me to new cultures and contrasting experiences, and have thus learnt to adapt and accommodate in a way that is acceptable to new cultures.</p>
-<p>GIS has always been a subject that has fascinated me, as it combines my passion for geography, land surveying and technology to create a unique tool for problem solving and decision-making. The power to visualize and analyze spatial data, in combination with the ability to use this information to drive better outcomes, is what drew me to the field. I am particularly interested in the role of GIS technology and innovation in promoting sustainability and resilience in cities.</p>
-<section id="my-hobbieslikes" class="level1" style="pink">
-<h1 style="pink">My Hobbies/likes</h1>
-<p>I have a diverse range of hobbies and likes that reflect my varied interests. I find solace in the captivating worlds created by novels, where each page holds the promise of a new adventure or insight. Dancing allows me to express myself through movement, while word games challenge and stimulate my mind. Video games provide a dynamic and immersive form of entertainment, and watching movies allows me to explore different narratives and genres. Collectively, these activities contribute to a rich tapestry of leisure, blending creativity, mental engagement, and sheer enjoyment.</p>
+<p><u><strong>Q2:</strong></u> <strong>Draw a schema diagram for the following bank database:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/bank schema design.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="575"></p>
+<figcaption>Figure 2: Schema for bank database</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Bank Schema Diagram.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figcaption>Figure 3: Schema diagram for bank database</figcaption>
+</figure>
+</div>
+<p><strong>Q3: Consider the above bank database. Assume that branch names (branch_name)and customer names (customer_name)uniquely identify branches and customers, but loans and accounts can be associated with more than one customer.</strong></p>
+<p><strong>i. What are the appropriate primary keys? (Underline each in diagram)</strong></p>
+<p>Please reference the <em>figures 2 &amp; 3</em> above for the primary keys <u><em>underlined</em></u><em>.</em></p>
+<p><strong>ii. Given your choice of primary keys, identify appropriate foreign keys</strong></p>
+<ol type="1">
+<li><u>Loan Relation Schema:</u></li>
+</ol>
+<ul>
+<li>branch_name in Loan is a foreign key referencing branch_name in Branch.</li>
+</ul>
+<ol start="2" type="1">
+<li><u>Borrower Relation Schema:</u></li>
+</ol>
+<ul>
+<li><p>ID in Borrower is a foreign key referencing ID in Customer.</p></li>
+<li><p>loan_number in Borrower is a foreign key referencing loan_number in Loan.</p></li>
+</ul>
+<ol start="3" type="1">
+<li><u>Account Relation Schema:</u></li>
+</ol>
+<ul>
+<li>branch_name in Account is a foreign key referencing branch_name in Branch.</li>
+</ul>
+<ol start="4" type="1">
+<li><u>Depositor Relation Schema:</u></li>
+</ol>
+<ul>
+<li><p>ID in Depositor is a foreign key referencing ID in Customer.</p></li>
+<li><p>account_number in Depositor is a foreign key referencing account_number in Account.</p></li>
+</ul>
+<section id="downloads-available-here" class="level1">
+<h1>Downloads available here</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="images/Victoria Ebeh_Assignment 2-04.pdf" style="width:3in;height:3in"></p>
+<figcaption>PDF Version available here</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="images/Victoria Ebeh_Assignment 2_Presentation.pdf" style="width:3in;height:3in"></p>
+<figcaption>PowerPoint Presentation (PDF) available here</figcaption>
+</figure>
+</div>
 
 
 </section>
