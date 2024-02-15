@@ -8,7 +8,7 @@
 
 <meta name="author" content="Victoria Ebeh">
 
-<title>Victoria Ebeh - GISC 6354-Assignment 1</title>
+<title>Victoria Ebeh - GISC 6354-Assignment 3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">GISC 6354-Assignment 1</h1>
+<h1 class="title">GISC 6354-Assignment 3</h1>
 </div>
 
 
@@ -149,100 +149,70 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><u><strong>Q1:</strong></u>&nbsp; <strong>Name and describe three applications you have used that employed a database system to store and access persistent data. (e.g.&nbsp;airlines, online trade, banking, university system)</strong></p>
-<ol type="1">
-<li><u>Bank of America (Online Banking System):</u> Banks utilize database systems to store and manage vast amounts of customer data, including account details, transaction histories, and personal information. These systems allow customers to access their accounts, perform transactions, and retrieve historical data securely.</li>
-<li><u>Amazon (E-commerce Platform):</u> Online retail platforms use databases to store product information, customer details, order histories, and transaction records. This allows users to browse products, make purchases, track orders, and maintain a personalized shopping experience. Databases enable efficient inventory management and order processing.</li>
-<li><u>Hospital Information System:</u> Healthcare organizations employ database systems to manage patient records, medical histories, treatment plans, and billing information. This ensures accurate and secure storage of critical health data, facilitates quick access for healthcare professionals, and supports the integration of various aspects of patient care.</li>
-</ol>
-<p><u><strong>Q2:</strong></u> <strong>Propose three applications in domain projects (e.g.&nbsp;criminology, economics, brain science, etc.). Be sure you include i. Purpose ii. Functions iii. Simple interface design</strong></p>
-<ol type="1">
-<li><u>Environmental Monitoring System:</u> The application aims to monitor and analyze environmental data for ecological research and conservation purposes. It provides real-time information on air quality, temperature, pollution levels, and various environmental parameters. Additionally, users can contribute data through crowdsourcing, enhancing the application’s capability for a comprehensive understanding of environmental conditions. Its functionality will include the following;</li>
-</ol>
-<ul>
-<li><p>It will display real-time environmental data with visual indicators and have mapping capabilities.</p></li>
-<li><p>Allow users to explore historical data trends and patterns.</p></li>
-<li><p>Will provide alerts for critical environmental conditions including locational data.</p></li>
-<li><p>Support data contribution with a simple reporting feature.</p></li>
-</ul>
-<p><u>Simple interface design:</u> The interface design is user-friendly, featuring a clean dashboard with intuitive icons for different environmental parameters. It includes an interactive map displaying real-time data for various locations, graphs depicting historical trends and patterns, and a user-friendly reporting button for data contributions.</p>
-<ol start="2" type="1">
-<li><u>0</u>es;</li>
-</ol>
-<ul>
-<li><p>Display crime hotspots on a map with predictive analytics.</p></li>
-<li><p>Allow users to explore crime trends over time.</p></li>
-<li><p>Provide recommendations for optimized police patrolling routes.</p></li>
-<li><p>Generate reports for policymakers based on predictive analysis.</p></li>
-</ul>
-<p><u>Simple interface design:</u> The interface design includes a map with color-coded markers highlighting crime hotspots, a time-series graph displaying crime trends, a route optimization tool for law enforcement patrols, and easy-to-read reports with visualizations.</p>
-<ol start="3" type="1">
-<li><u>Disease Monitoring/Prediction Tool:</u> The purpose of this tool is to monitor and predict the spread of infectious diseases, providing timely information to healthcare professionals, policymakers, and the public. By leveraging data analysis and predictive modeling, the tool aims to enhance preparedness, response, and proactive measures to mitigate the impact of diseases. It will be able to carry out the following;</li>
-</ol>
-<ul>
-<li><p>Monitor real-time data on reported cases, infection rates, and geographical spread.</p></li>
-<li><p>Utilize predictive algorithms to forecast potential disease outbreaks and hotspot locations.</p></li>
-<li><p>Implement an alert system for notifying users about emerging trends and relevant health advisories.</p></li>
-<li><p>Provide a map interface with color-coded markers for visual representation of disease prevalence.</p></li>
-<li><p>Assist healthcare providers in resource allocation by predicting areas likely to experience a surge in cases.</p></li>
-<li><p>Enable users to input and monitor their health status, symptoms, and travel history.</p></li>
-<li><p>Include a section with educational resources, guidelines, and best practices for disease prevention and management.</p></li>
-</ul>
-<p><u>Simple interface design:</u> The interface design for the disease monitoring tool features a clean dashboard displaying key statistics (total cases, recovered cases, active cases), a map with color-coded markers for disease prevalence or hotspots, an alert section for timely notifications on disease trends, a user-friendly health monitoring section, and a dedicated space for educational resources on disease prevention.</p>
-<p><strong>Q3: Describe at least three tables that might be used to store information in a social network/social media system such as Twitter or Reddit.</strong></p>
-<ol type="1">
-<li><u>User table:</u> This table stores essential information about users. It enables authentication and authorization and also supports user profile customization and display. Possible data in this table may include;</li>
-</ol>
-<p><u>Fields/Columns:</u></p>
-<ul>
-<li><p>UserID (Primary Key): Unique identifier for each user.</p></li>
-<li><p>Username: The chosen username or handle of the user.</p></li>
-<li><p>Email: Email address associated with the user’s account.</p></li>
-<li><p>Password: Encrypted password for account security.</p></li>
-<li><p>JoinDate: Date when the user joined the platform.</p></li>
-<li><p>ProfileImage: URL or file reference for the user’s profile picture.</p></li>
-</ul>
-<ol start="2" type="1">
-<li><u>Followers/Following Table:</u> This table manages the relationships between users who follow each other and supports features such as the user’s follower/following lists. Possible data in this table may include;</li>
-</ol>
-<p><u>Fields/Columns:</u></p>
-<ul>
-<li><p>FollowerID (Foreign Key): Links to the User Table, indicating the follower.</p></li>
-<li><p>FollowingID (Foreign Key): Links to the User Table, indicating the user being followed.</p></li>
-<li><p>FollowDate: Date when the following relationship was established.</p></li>
-</ul>
-<ol start="3" type="1">
-<li><u>Post Table:</u> &nbsp;This table stores individual posts created by the users. It facilitates the display of content on the platform and helps track engagement metrics such as likes and comments. Possible data in this table may include;</li>
-</ol>
-<p><u>Fields/Columns:</u></p>
-<ul>
-<li><p>PostID (Primary Key): Unique identifier for each post.</p></li>
-<li><p>UserID (Foreign Key): Links to the User Table, indicating the author of the post.</p></li>
-<li><p>Content: The text or multimedia content of the post.</p></li>
-<li><p>Timestamp: Date and time when the post was created.</p></li>
-<li><p>LikesCount: Number of likes or upvotes received.</p></li>
-<li><p>CommentsCount: Number of comments on the post.</p></li>
-</ul>
-<p><strong>Q4: what are the things current database systems cannot do?</strong></p>
-<ol type="1">
-<li>Perform complex calculations or logic that are not supported by the database language or functions.</li>
-<li>Understand the meaning or context of the data, such as natural language or images.</li>
-<li>Automatically adapt to changing data or user requirements without modification or re-design.</li>
-<li>Guarantee the quality, accuracy, or validity of the data, as these depend on the data sources and the users.</li>
-<li>Prevent unauthorized access, modification, or deletion of the data, unless proper security measures are implemented.</li>
-</ol>
+<p><u><strong>Q1:</strong></u>&nbsp; <strong>Open the Online SQL interpreter (https://www.db-book.com/db7/university-labdir/sqljs.html)</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sql interpreter.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: Image of opened online SQL interpreter.</figcaption>
+</figure>
+</div>
+<p><u><strong>Q2:</strong></u> <strong>Write SQL codes to get a list of:</strong></p>
+<p><strong>i. Students IDs (hint: from the takes relation)</strong></p>
+<p>SELECT DISTINCT ID FROM takes</p>
+<p><strong>ii. Instructors</strong></p>
+<p>SELECT * FROM instructor</p>
+<p>OR</p>
+<p>SELECT ID, name, dept_name FROM instructor</p>
+<p><strong>iii. Department</strong></p>
+<p>SELECT dept_name FROM department</p>
+<p><u><strong>Q3:</strong></u> <strong>Write in SQL codes to do following queries:</strong></p>
+<p><strong>i. Find the ID and name of each student who has taken at least one Comp. Sci. course; make sure there are no duplicate names in the result.</strong></p>
+<p>SELECT DISTINCT student.ID, name</p>
+<p>FROM student, course, takes</p>
+<p>WHERE course.course_id = takes.course_id AND course.dept_name = ‘Comp. Sci.’;</p>
+<p><strong>ii. Add grades to the list</strong></p>
+<p>SELECT DISTINCT student.ID, name, grades</p>
+<p>FROM student, course, takes</p>
+<p>WHERE course.course_id = takes.course_id AND course.dept_name = ‘Comp. Sci.’;</p>
+<p><strong>iii. Find the ID and name of each student who has not taken any course offered before 2017.</strong></p>
+<p>SELECT DISTINCT s.ID, s.name</p>
+<p>FROM student s, takes</p>
+<p>WHERE NOT EXISTS (</p>
+<p>SELECT 1</p>
+<p>FROM takes t</p>
+<p>JOIN section sec ON t.course_id = sec.course_id AND t.sec_id = sec.sec_id</p>
+<p>&nbsp;&nbsp;&nbsp; WHERE t.ID = s.ID AND sec.year &lt; 2017</p>
+<p>);</p>
+<p><strong>iv. For each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor.</strong></p>
+<p>SELECT dept_name, MAX(salary) AS max_salary</p>
+<p>FROM instructor</p>
+<p>GROUP BY dept_name</p>
+<p><strong>v. Find the lowest, across all departments, of the per-department maximum salary computed by the preceding query.</strong></p>
+<p>SELECT MIN(max_salary) AS lowest_max_salary</p>
+<p>FROM (</p>
+<p>SELECT MAX(salary) AS max_salary</p>
+<p>FROM instructor</p>
+<p>GROUP BY dept_name</p>
+<p>) AS department_max_salaries;</p>
+<p><strong>vi. Add names to the list</strong></p>
+<p>SELECT name, MIN(max_salary) AS lowest_max_salary</p>
+<p>FROM (</p>
+<p>SELECT name, MAX(salary) AS max_salary</p>
+<p>FROM instructor</p>
+<p>GROUP BY dept_name</p>
+<p>) AS department_max_salaries</p>
+<p><u><strong>Q4:</strong></u> <strong>Find an instructor (with name and ID) who has never given an A grade in any course she or he has taught. (Instructors who have never taught a course trivially satisfy this condition.)</strong></p>
+<p>SELECT DISTINCT i.ID, i.name</p>
+<p>FROM instructor i</p>
+<p>LEFT JOIN teaches t ON i.ID = t.ID</p>
+<p>LEFT JOIN takes tk ON t.course_id = tk.course_id AND t.sec_id = tk.sec_id AND t.semester = tk.semester AND t.year = tk.year</p>
+<p>WHERE t.ID IS NULL OR tk.grade &lt;&gt; ‘A’;</p>
 <section id="downloads-available-here" class="level1">
 <h1>Downloads available here</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><embed src="images/Victoria Ebeh_Assignment 1.pdf" style="width:3in;height:3in"></p>
-<figcaption>PDF version available here</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><embed src="images/Victoria Ebeh_Assignment 1_Presentation.pdf" style="width:3in;height:3in"></p>
-<figcaption>PowerPoint Presentation (PDF) available here</figcaption>
+<p><embed src="images/Victoria Ebeh_Assignment 3.pdf" class="img-fluid"></p>
+<figcaption>Download PDF version here</figcaption>
 </figure>
 </div>
 
