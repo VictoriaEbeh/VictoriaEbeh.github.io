@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Victoria Ebeh">
 
-<title>Victoria Ebeh - GISC 6354 - ASSIGNMENTS/LABS &amp; Projects</title>
+<title>Victoria Ebeh - GISC 6354-Assignment 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About Victoria</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./assignments.html" aria-current="page"> 
+    <a class="nav-link" href="./assignments.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
 </ul>
@@ -116,8 +117,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignments" id="toc-assignments" class="nav-link active" data-scroll-target="#assignments">Assignments</a></li>
-  <li><a href="#project" id="toc-project" class="nav-link" data-scroll-target="#project">Project</a></li>
+  <li><a href="#downloads-available-here" id="toc-downloads-available-here" class="nav-link active" data-scroll-target="#downloads-available-here">Downloads available here</a></li>
   </ul>
 </nav>
     </div>
@@ -126,13 +126,19 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">GISC 6354 - ASSIGNMENTS/LABS &amp; Projects</h1>
+<h1 class="title">GISC 6354-Assignment 4</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Victoria Ebeh </p>
+          </div>
+  </div>
     
   
     
@@ -143,18 +149,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="assignments" class="level1">
-<h1>Assignments</h1>
-<p><strong>These are links to all my assignments</strong></p>
-<p><a href="./assignment-1.html">Assignment 1</a></p>
-<p><a href="./assignment-2.html">Assignment 2</a></p>
-<p><a href="./assignment-3.html">Assignment 3</a></p>
-<p><a href="./assignment-4.html">Assignment 4</a></p>
-<p><a href="./assignment-5.html">Assignment 5</a></p>
+<p><u><strong>Q1</strong></u>: <strong>Explain the difference between a weak and a strong entity set. Use an example other than the one in Chapter 6 to illustrate. (Consult Ch. 6, 6.5.3)</strong></p>
+<p>A weak entity set has its existence dependent on another entity set referred to as its identifying entity set. Instead of having its own primary key, a weak entity uses the primary key of the identifying entity set along with extra attributes, known as discriminator attributes, to uniquely identify itself. But a strong entity set has its own independent primary key.</p>
+<p>For example, we can consider two entity sets, “Pets”, which is the identifying set with primary key PetID, and “PetVaccine” which is the weak entity set. Each vaccine record doesn’t have a unique identifier on its own; its existence depends on the specific pet it is associated with. Instead of having a standalone primary key, “PetVaccine” might use a combination of attributes like PetID and additional attributes like VaccineDate to uniquely identify a vaccine record linked to a particular pet.</p>
+<p><u><strong>Q2</strong></u>: <strong>SQL exercise:</strong></p>
+<p><strong>a) Consider the query;</strong></p>
+<p><strong>SELECT course_id, semester, year, sec_id, AVG (tot_cred)</strong></p>
+<p><strong>FROM takes NATURAL JOIN student</strong></p>
+<p><strong>WHERE year = 2017</strong></p>
+<p><strong>GROUP BY course_id, semester, year, sec_id</strong></p>
+<p><strong>HAVING COUNT (ID) &gt;= 2;</strong></p>
+<p><strong>i. Explain why appending natural join section in the from clause would not change the</strong></p>
+<p><strong>result. (Consult Ch. 4, 4.1.1)</strong></p>
+<p>Adding “natural join section” to the “FROM” clause wouldn’t make a difference because the query already uses the “natural join” keyword to connect the “takes” and “student” tables based on shared column names. The “natural join” automatically combines columns with matching names in both tables. Since the “section” table is indirectly involved through “takes,” explicitly stating “natural join section” won’t change the result, as the conditions are already set by the existing join.</p>
+<p><strong>ii. Test the results using the Online SQL interpreter</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Image showing original query results.png" class="img-fluid figure-img" width="644"></p>
+<figcaption>Figure 1: Image showing original query results</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/appended section table.png" class="img-fluid figure-img" width="648"></p>
+<figcaption>Figure 2: Image showing query results with appended ‘section’ table</figcaption>
+</figure>
+</div>
+<p><strong>b) Write an SQL query using the university schema to find the ID of each student who has never taken a course at the university. Do this using no subqueries and no set operations (use an outer join). (Consult Ch. 4, 4.1.3)</strong></p>
+<p><strong>SELECT</strong> s.ID</p>
+<p><strong>FROM</strong> student s</p>
+<p><strong>LEFT JOIN</strong> takes t <strong>ON</strong> s.ID = t.ID</p>
+<p><strong>WHERE</strong> t.ID IS <strong>NULL</strong>;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sql for student with no course.png" class="img-fluid figure-img" width="535"></p>
+<figcaption>Figure 3: Results of query for student who has taken no course</figcaption>
+</figure>
+</div>
+<p><u><strong>Q3:</strong></u> <strong>Design an E-R diagram for keeping track of the scoring statistics of your favorite sports team. You should store the matches played, the scores in each match, the players in each match, and individual player scoring statistics for each match. Summary statistics should be modeled as derived attributes with an explanation as to how they are computed. (Consult: Practice Exercise solutions on textbook website)</strong></p>
+<p><strong>a) Draw the E-R diagram using draw.io. Read this website for instructions.</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ERD Original 1.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 4: E-R Diagram showing favorite team statistics. Type 1</figcaption>
+</figure>
+</div>
+<section id="note-season_score-is-the-derived-attribute-obtained-by-summing-the-score-values-associated-with-player-entity-set-through-the-played-relationship-set.-in-type-2-points-is-the-derived-attribute-obtained-through-the-associated-relationship-between-match-and-match-players-entity-sets-in-the-erd-below." class="level4" style="color: green;">
+<h4 style="color: green;" class="anchored" data-anchor-id="note-season_score-is-the-derived-attribute-obtained-by-summing-the-score-values-associated-with-player-entity-set-through-the-played-relationship-set.-in-type-2-points-is-the-derived-attribute-obtained-through-the-associated-relationship-between-match-and-match-players-entity-sets-in-the-erd-below.">Note: Season_score() is the derived attribute obtained by summing the score values associated with ‘player’ entity set through the ‘played’ relationship set. In type 2, points is the derived attribute obtained through the associated relationship between ‘match’ and ‘match players’ entity sets in the ERD below.</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ERD 1.jpeg" class="img-fluid figure-img" width="762"></p>
+<figcaption>Figure 5: E-R Diagram showing favorite team statistics. Type 2</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ERD 2.jpeg" class="img-fluid figure-img" width="803"></p>
+<figcaption>Figure 7: E-R Diagram showing favorite team statistics and their teams. Type 2</figcaption>
+</figure>
+</div>
 </section>
-<section id="project" class="level1">
-<h1>Project</h1>
-<p><a href="./proposal.html">Project Proposal</a></p>
+<section id="downloads-available-here" class="level1">
+<h1>Downloads available here</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="images/Victoria Ebeh_Assignment 4-01.pdf" style="width:3in;height:3in"></p>
+<figcaption>PDF Version</figcaption>
+</figure>
+</div>
 
 
 </section>

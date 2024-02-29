@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Victoria Ebeh">
 
-<title>Victoria Ebeh - GISC 6354 - ASSIGNMENTS/LABS &amp; Projects</title>
+<title>Victoria Ebeh - GISC 6354-Assignment 5</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About Victoria</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./assignments.html" aria-current="page"> 
+    <a class="nav-link" href="./assignments.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
 </ul>
@@ -116,8 +117,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignments" id="toc-assignments" class="nav-link active" data-scroll-target="#assignments">Assignments</a></li>
-  <li><a href="#project" id="toc-project" class="nav-link" data-scroll-target="#project">Project</a></li>
+  <li><a href="#downloads-available-here" id="toc-downloads-available-here" class="nav-link active" data-scroll-target="#downloads-available-here">Downloads available here</a></li>
   </ul>
 </nav>
     </div>
@@ -126,13 +126,19 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">GISC 6354 - ASSIGNMENTS/LABS &amp; Projects</h1>
+<h1 class="title">GISC 6354-Assignment 5</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Victoria Ebeh </p>
+          </div>
+  </div>
     
   
     
@@ -143,18 +149,48 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="assignments" class="level1">
-<h1>Assignments</h1>
-<p><strong>These are links to all my assignments</strong></p>
-<p><a href="./assignment-1.html">Assignment 1</a></p>
-<p><a href="./assignment-2.html">Assignment 2</a></p>
-<p><a href="./assignment-3.html">Assignment 3</a></p>
-<p><a href="./assignment-4.html">Assignment 4</a></p>
-<p><a href="./assignment-5.html">Assignment 5</a></p>
-</section>
-<section id="project" class="level1">
-<h1>Project</h1>
-<p><a href="./proposal.html">Project Proposal</a></p>
+<p><u><strong>Q1</strong></u>: <strong>An E-R diagram can be viewed as a graph. What do the following mean in terms of the structure of an enterprise schema?</strong></p>
+<p><strong>a) The graph is disconnected.</strong></p>
+<p>This means that there are separate, isolated groups of entities and relationships within the schema. Each group, or subgraph, does not have any connections to the other groups.</p>
+<p><strong>b) The graph has a cycle.</strong></p>
+<p>This indicates that there is at least one circular relationship in the schema, where entities are connected in a loop. In E-R diagrams, cycles can introduce complexity and may lead to challenges in database design, as they can imply dependencies that need careful consideration. In terms of an enterprise schema, cycles might represent intricate interdependencies or feedback loops within the database structure.</p>
+<p><u><strong>Q2:</strong></u> <strong>We can convert any weak entity set to a strong entity set by simply adding appropriate attributes. Why, then, do we have weak entity sets?</strong></p>
+<p><u>Normalization:</u> The use of weak entities aligns with the principles of normalization in database design. By separating out entities with dependent existences, it can lead to a more normalized database schema, reducing redundancy caused by storing the same primary key multiple times.</p>
+<p><u>Database Integrity:</u> Modeling entities as weak helps enforce certain integrity constraints in the database.</p>
+<p><u><strong>Q3:</strong></u> <strong>SQL exercise:</strong></p>
+<p><strong>a) Consider the employee database:</strong></p>
+<p><img src="images/employee schema.png" class="img-fluid" width="441"></p>
+<p><strong>where the primary keys are underlined. Give an expression in SQL for each of the following queries. (Hint: use from employee as e, works as w, company as c, manages as m)</strong></p>
+<p><strong>i. Find ID and name of each employee who lives in the same city as the location of the company for which the employee works.</strong></p>
+<p>SELECT e.ID, e.person_name</p>
+<p>FROM Employee e, Works w, Company c</p>
+<p>WHERE e.city = c.city AND w.company_name = c.company_name;</p>
+<p><strong>ii. Find ID and name of each employee who lives in the same city and on the same street as does her or his manager. Wrong needs a subquery</strong></p>
+<p>SELECT e.ID, e.person_name</p>
+<p>FROM Employee e, Manages m</p>
+<p>WHERE e.city = manager.city AND e.street = manager.street AND e.ID = m.ID;</p>
+<p><strong>iii. Find ID and name of each employee who earns more than the average salary of all employees of her or his company.</strong></p>
+<p>SELECT e.ID, e.person_name</p>
+<p>FROM Employee e, Works w</p>
+<p>WHERE e.ID = w.ID AND w.salary &gt; (</p>
+<p>SELECT AVG(salary)</p>
+<p>FROM Works</p>
+<p>WHERE company_name = w.company_name</p>
+<p>);</p>
+<p><strong>a) Consider the following SQL query that seeks to find a list of titles of all courses taught in Spring 2017 along with the name of the instructor.</strong></p>
+<p><strong>SELECT name, title</strong></p>
+<p><strong>FROM instructor NATURAL JOIN teaches NATURAL JOIN section NATURAL JOIN course</strong></p>
+<p><strong>WHERE semester = ‘Spring’ AND year = 2017</strong></p>
+<p><strong>What is wrong with this query? (Hint: check book website)</strong></p>
+<p>The syntax of the query is correct, but it will not give the correct answer for the list of titles and instructors of all courses taught in 2017. This is because the natural join clause used joins columns/attributes that tables have in common and eliminates the rest. Because instructor and course both have 'dept_name' as attributes, this query will only return values where the instructor and course are from the same department and would remove those values where instructor departments and course departments don't match.</p>
+<section id="downloads-available-here" class="level1">
+<h1>Downloads available here</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="images/Victoria Ebeh_Assignment 05.pdf" style="width:3in;height:3in"></p>
+<figcaption>PDF Version</figcaption>
+</figure>
+</div>
 
 
 </section>
