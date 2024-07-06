@@ -145,5 +145,75 @@
     "title": "GISC 6354 - ASSIGNMENTS/LABS & Projects",
     "section": "Launch the app!",
     "text": "Launch the app!\nIf you would like to take a look and interact with my app, SDG-Active, just click on the app logo below👇."
+  },
+  {
+    "objectID": "school.html",
+    "href": "school.html",
+    "title": "UTD: Geographic Information Sciences(MS)",
+    "section": "",
+    "text": "Hi again! As you know, I’m a master’s student in the Geospatial Information Sciences (GIS) program at the University of Texas at Dallas (UTD). Here, you’ll find a glimpse into my school life, including the assignments and projects that I’ve worked on."
+  },
+  {
+    "objectID": "school.html#launch-the-app",
+    "href": "school.html#launch-the-app",
+    "title": "UTD: Geographic Information Sciences(MS)",
+    "section": "Launch the app!",
+    "text": "Launch the app!\nIf you would like to take a look and interact with my app, SDG-Active, just click on the app logo below👇."
+  },
+  {
+    "objectID": "GISC 6354.html",
+    "href": "GISC 6354.html",
+    "title": "GISC 6354 - ASSIGNMENTS/LABS & Projects",
+    "section": "",
+    "text": "These are links to all my assignments\nAssignment 1:\nWelcome to the Database Systems Assignment! Here, we delve into the realm of database systems, exploring their applications, design considerations, and limitations. Throughout this assignment, we’ll examine various facets of database utilization, from real-world examples to theoretical constraints. Click the link above to view my thoughts and answers.\nAssignment 2:\nLet’s talk Database Fundamentals! In this module, we’ll unravel the foundational concepts of databases, understanding their structure, relationships, and key components. Through a series of questions and exercises, we’ll get into the core principles of database management. Click the link above and we’ll get started.\nAssignment 3:\nThis is the SQL Fundamentals page! Here, you’ll embark on a journey with me into the world of Structured Query Language (SQL). Follow me as I learn the essential skills for retrieving data from databases. Whether you’re a novice or seasoned SQL enthusiast, this resource offers practical examples to help you write fundamental SQL codes with confidence. Let’s dive in and start querying! Click on the link above.\nAssignment 4:\nWelcome to the Advanced Database Concepts Assignment! In this page, we’ll go into more complex aspects of database design and querying, exploring concepts such as entity sets, E-R diagrams, and more on SQL queries. Through a series of thought-provoking questions and practical exercises, we’ll deepen our understanding of database systems. You know what to do😉.\n Assignment 5:\nWelcome to my SQL Advanced Coding section! Here, we delve deeper into SQL techniques to tackle more complex data retrieval challenges. In this segment, addressed are advanced topics such as optimizing queries, handling complex joins, and incorporating subqueries. You will also find some fun facts about E-R diagrams and entity sets. Click the link above to view my progress.\nAssignment 6:\nLet’s dive into the world🌍 of web🕸️ data representations. The task is to locate websites utilizing JSON and XML formats. Analyze their structures and compositions, and identify the technologies or methods employed to create their web databases. Also included are more SQL coding examples, Let’s continue our journey of mastering SQL together. Click that link!"
+  },
+  {
+    "objectID": "GISC 6354.html#launch-the-app",
+    "href": "GISC 6354.html#launch-the-app",
+    "title": "GISC 6354 - ASSIGNMENTS/LABS & Projects",
+    "section": "Launch the app!",
+    "text": "Launch the app!\nIf you would like to take a look and interact with my app, SDG-Active, just click on the app logo below👇."
+  },
+  {
+    "objectID": "school.html#gisc-6354-information-management",
+    "href": "school.html#gisc-6354-information-management",
+    "title": "UTD: Geographic Information Sciences(MS)",
+    "section": "GISC 6354: Information Management",
+    "text": "GISC 6354: Information Management\nThis course covers the fundamentals of database systems, including their concepts, design, programming, and management. It offers hands-on training in DBMS and explores new technologies like NoSQL and various modern database systems. I was engaged in database programming and application development, using programming languages such as SQL, Python, HTML, and Dash."
+  },
+  {
+    "objectID": "school.html#gisc-6301-gis-data-analysis-fundamentals",
+    "href": "school.html#gisc-6301-gis-data-analysis-fundamentals",
+    "title": "UTD: Geographic Information Sciences(MS)",
+    "section": "GISC 6301: GIS Data Analysis Fundamentals",
+    "text": "GISC 6301: GIS Data Analysis Fundamentals\nIn this course, we explore essential statistical techniques and algorithms for handling geospatial data. Key topics include descriptive statistics, data visualization, exploratory methods, probability theory, study design, and sampling theory. We also cover statistical inference, simulation experiments, basic correlation and regression analyses, and pattern analysis, all from a Geoinformation Sciences perspective. This ensures an understanding of how to analyze and interpret geospatial data effectively."
+  },
+  {
+    "objectID": "school.html#gisc-6325-remote-sensing-fundamentals",
+    "href": "school.html#gisc-6325-remote-sensing-fundamentals",
+    "title": "UTD: Geographic Information Sciences(MS)",
+    "section": "GISC 6325: Remote Sensing Fundamentals",
+    "text": "GISC 6325: Remote Sensing Fundamentals\nThis course introduces the principles of remote sensing, sensor technologies, image processing techniques, and their applications. We learn about electromagnetic radiation, satellite and airborne systems, and how to use remote sensing data for real-world problems. Hands-on exercises used state-of-the-art software such as ERDAS Imagine."
+  },
+  {
+    "objectID": "school.html#gisc-6384-advanced-geographic-information-systems",
+    "href": "school.html#gisc-6384-advanced-geographic-information-systems",
+    "title": "UTD: Geographic Information Sciences(MS)",
+    "section": "GISC 6384: Advanced Geographic Information Systems",
+    "text": "GISC 6384: Advanced Geographic Information Systems\nThis course covers the basics and more advanced topics of Geographic Information Systems (GIS) and their applications. I learned how to use GIS for manipulating, querying, analyzing, and visualizing spatial data. Topics include raster and vector data models, Geodatabase, map algebra, 3-D surface analysis, spatial interpolation, and network analysis. Lab exercises with industry-standard GIS software provided hands-on experience solving real-world social, economic, and environmental issues."
+  },
+  {
+    "objectID": "school.html#gisc-6382-applied-geographic-information-systems",
+    "href": "school.html#gisc-6382-applied-geographic-information-systems",
+    "title": "UTD: Geographic Information Sciences(MS)",
+    "section": "GISC 6382: Applied Geographic Information Systems",
+    "text": "GISC 6382: Applied Geographic Information Systems\nThis course teaches hands-on skills with industry-standard GIS software for diverse applications. We apply GIS techniques to manage urban infrastructure, analyze marketing and locations, address environmental issues, and explore geologic and geophysical data. The course also covers applications in Economic, Political, and Policy Sciences, giving you hands-on experience in solving real-world challenges."
+  },
+  {
+    "objectID": "school.html#gisc-6323-machine-learning-for-socio-economic-and-geo-referenced-data",
+    "href": "school.html#gisc-6323-machine-learning-for-socio-economic-and-geo-referenced-data",
+    "title": "UTD: Geographic Information Sciences(MS)",
+    "section": "GISC 6323: Machine Learning for Socio-Economic and Geo-Referenced Data",
+    "text": "GISC 6323: Machine Learning for Socio-Economic and Geo-Referenced Data\nThis course introduces models, algorithms, and their conceptual foundations for structuring dynamic socio-economic and geo-referenced data. We utilize open-source software and commonly available hardware. Through practical examples, I learned supervised machine learning to develop classification rules and unsupervised data mining to reveal hidden data patterns."
   }
 ]
